@@ -1,0 +1,34 @@
+*{
+    margin:  0;
+    padding: 0;
+}
+
+html {
+    margin: 2%;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0 !important;
+}
+
+nav {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+}
+
+@media (min-width : 300px) and (max-width : 480px) {
+    .resume {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: black;
+        background-size: cover;
+        color: rgb(252, 179, 196);
+    }
+}
+
+@media (min-width : 480px) and (max-width : 768px) {}
+
+@media (min-width : 768px) and (max-width : 1024px) {}
+
+@media (min-width : 1281px) {}
