@@ -1,5 +1,5 @@
-*{
-    margin:  0;
+* {
+    margin: 0;
     padding: 0;
 }
 
@@ -16,19 +16,232 @@ nav {
     border-bottom: solid 1px black;
 }
 
+#brick {
+    width: 25%;
+    position: relative;
+    cursor: pointer;
+}
+
+#projet {
+    margin-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
 @media (min-width : 300px) and (max-width : 480px) {
+    #pp {
+        border-radius: 10%;
+        padding-right: 2%;
+    }
+
     .resume {
+        margin-top: 10%;
+        margin-bottom: 5%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: black;
         background-size: cover;
-        color: rgb(252, 179, 196);
+        color: rgb(3, 3, 3);
+    }
+
+    #myIframe {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        width: 381px;
+        top: 750px;
+        bottom: -200;
+        left: 207px;
+        height: 229px;
+    }
+
+    #cv {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #pub {
+        text-align: center;
+    }
+
+    #maquette {
+        display: block;
+        margin: 10% auto;
+        width: 75%;
+    }
+
+    #divmaquette {
+        margin-bottom: 15%;
+    }
+
+    #push-swap {
+        margin: 10% 0;
+    }
+    .container {
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+    }
+
+    .box {
+        flex: 1;
+        overflow: hidden;
+        transition: .5s;
+        margin: 0 2%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+        line-height: 0;
+    }
+
+    .box>img {
+        width: 200%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: .5s;
+    }
+
+    .box>span {
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+    }
+
+    .box:hover {
+        flex: 1 1 50%;
+    }
+
+    .box:hover>img {
+        width: 100%;
+        height: 100%;
     }
 }
 
-@media (min-width : 480px) and (max-width : 768px) {}
+@media (min-width : 480px) and (max-width : 768px) {
+    .container {
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+    }
 
-@media (min-width : 768px) and (max-width : 1024px) {}
+    .box {
+        flex: 1;
+        overflow: hidden;
+        transition: .5s;
+        margin: 0 2%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+        line-height: 0;
+    }
 
-@media (min-width : 1281px) {}
+    .box>img {
+        width: 200%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: .5s;
+    }
+
+    .box>span {
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+    }
+
+    .box:hover {
+        flex: 1 1 50%;
+    }
+
+    .box:hover>img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width : 768px) and (max-width : 1024px) {
+    .container {
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+    }
+
+    .box {
+        flex: 1;
+        overflow: hidden;
+        transition: .5s;
+        margin: 0 2%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+        line-height: 0;
+    }
+
+    .box>img {
+        width: 200%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: .5s;
+    }
+
+    .box>span {
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+    }
+
+    .box:hover {
+        flex: 1 1 50%;
+    }
+
+    .box:hover>img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (min-width : 1025px) {
+    #caroumobile{
+        display: none !important;
+    }
+    .container {
+        display: flex;
+        width: 100%;
+        padding: 4% 2%;
+        box-sizing: border-box;
+    }
+
+    .box {
+        flex: 1;
+        overflow: hidden;
+        transition: .5s;
+        margin: 0 2%;
+        box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+        line-height: 0;
+    }
+
+    .box>img {
+        width: 200%;
+        height: calc(100% - 10vh);
+        object-fit: cover;
+        transition: .5s;
+    }
+
+    .box>span {
+        font-size: 3.8vh;
+        display: block;
+        text-align: center;
+        height: 10vh;
+        line-height: 2.6;
+    }
+
+    .box:hover {
+        flex: 1 1 50%;
+    }
+
+    .box:hover>img {
+        width: 100%;
+        height: 100%;
+    }
+}
