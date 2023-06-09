@@ -18,20 +18,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://js.cx/libs/animate.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="./script.js"></script>
   <title>Portfolio</title>
 </head>
 
 <body style="font-family: 'Lato', sans-serif;
 background-color: rgb(252, 179, 196);
 font-weight: 800 !important;">
+  <div id="gif-container"></div>
+  <div id="scroll-gif-container">
+    <img id="scroll-gif" src="./spideywall.gif" alt="Scroll GIF" width="70px" />
+  </div>
 
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <!-- <div class="container-fluid">
-        <div id="path"> -->
-          <img id="brick" src="./output-onlinepngtools.png" alt="" width="100%">
-        <!-- </div>
-      </div> -->
+      <div>
+        <img id="brick" src="./output-onlinepngtools.png" alt="" width="100%">
+        <img id="start" src="./spideylogo.png" alt="" width="10%" style="margin-left: 46px;">
+        <img id="pause" src="./mileslogo.png" alt="" width="10%">
+        <img id="stop" src="./venomlogo.png" alt="" width="10%">
+      </div>
       <script>
         function makeEaseInOut(timing) {
           return function (timeFraction) {
@@ -90,10 +96,10 @@ font-weight: 800 !important;">
             <a class="nav-link active" aria-current="page" href="#">À propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#projet">Projets</a>
+            <a id="spider" class="nav-link active" aria-current="page" href="#projet">Projets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#Contact">Contact</a>
+            <a id="man" class="nav-link active" aria-current="page" href="#Contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -102,7 +108,7 @@ font-weight: 800 !important;">
   </header>
   <main>
     <div class="resume">
-      <img id="pp" src="20221019_172413.jpg" alt="moi" width="40%">
+      <img id="pp" src="./20221019_172413.jpg" alt="moi" width="40%">
       <div id="present">
         <h1 style="font-size: 5vh;font-weight: bold !important;">À propos</h1>
         <p>Bien le bonjour, Madame, Monsieur, voici pour vous le portfolio du big boss Miky Mike. Je suis un
@@ -157,7 +163,9 @@ font-weight: 800 !important;">
         }
       }
     </style>
-    <a name="projet"><h1 style="font-size: 5vh;font-weight: bold !important;" id="projet">Projets</h1></a>
+    <a name="projet">
+      <h1 style="font-size: 5vh;font-weight: bold !important;" id="projet">Projets</h1>
+    </a>
     <h3 style="font-weight: 800 !important;text-align: center">Puissance4</h3>
     <div class="container">
       <form action="http://mikymike.infinityfreeapp.com/puissance4/index.html" target="_blank">
@@ -181,20 +189,20 @@ font-weight: 800 !important;">
     <div>
       <div id="divmaquette">
         <h3 style="font-weight: 800 !important; text-align: center; margin-top: 5%">Maquette</h3>
-          <script>
-            window.addEventListener("scroll", function () {
-              var maquette = document.getElementById("maquette");
-              var maquettePosition = maquette.getBoundingClientRect().top;
-              var windowHeight = window.innerHeight;
+        <script>
+          window.addEventListener("scroll", function () {
+            var maquette = document.getElementById("maquette");
+            var maquettePosition = maquette.getBoundingClientRect().top;
+            var windowHeight = window.innerHeight;
 
-              if (maquettePosition - windowHeight <= 0) {
-                maquette.style.opacity = 1;
-                maquette.style.transition = "opacity 2s"; // Ajouter une transition de 1 seconde
-              }
-            });
-          </script>
-          <img id="maquette" src="./maquette.png" onclick="agrandir(this)" alt="maquette" style="opacity: 0;">
-          <p style="text-align: center">Ptite maquette dans la simplicité.</p>
+            if (maquettePosition - windowHeight <= 0) {
+              maquette.style.opacity = 1;
+              maquette.style.transition = "opacity 2s"; // Ajouter une transition de 1 seconde
+            }
+          });
+        </script>
+        <img id="maquette" src="./maquette.png" onclick="agrandir(this)" alt="maquette" style="opacity: 0;">
+        <p style="text-align: center">Ptite maquette dans la simplicité.</p>
       </div>
       <script>
         function agrandir(image) {
@@ -235,49 +243,50 @@ font-weight: 800 !important;">
 
     </div>
     <div id="push-swap">
-  <h3 style="font-weight: 800 !important; text-align: center">PUSH-SWAP</h3>
-  <p style="text-align: center">Ci-dessous se trouve un algorithme en PHP nommé push-swap, qui permet de trier un tableau de nombres entiers dans l'ordre croissant.</p>
-  <form action="index.php" method="GET">
-    <label for="la">Tableau de int à trier:</label>
-    <input type="text" name="la" id="la" placeholder="Entrez les valeurs de la" required>
-    <button id="mon-bouton" class="btn btn-dark" type="submit" name="submit">Envoyer</button>
-  </form>
+      <h3 style="font-weight: 800 !important; text-align: center">PUSH-SWAP</h3>
+      <p style="text-align: center">Ci-dessous se trouve un algorithme en PHP nommé push-swap, qui permet de trier un
+        tableau de nombres entiers dans l'ordre croissant.</p>
+      <form action="index.php" method="GET">
+        <label for="la">Tableau de int à trier:</label>
+        <input type="text" name="la" id="la" placeholder="Entrez les valeurs de la" required>
+        <button id="mon-bouton" class="btn btn-dark" type="submit" name="submit">Envoyer</button>
+      </form>
 
-  <?php
-  require_once('push_swap.php');
-  $arr = $_GET['la'];
-  $la = explode(' ', $arr);
-  for ($i = 0; $i < count($la); $i++) {
-    $la[$i] = intval($la[$i]);
-  }
-  $lb = [];
-  push_swap($la, $lb);
-  echo '<div style="background-color: coral; text-align: center;">';
-  echo "Résultat : ";
-  for ($i = 0; $i < count($la); $i++) {
-    echo $la[$i], " ";
-  }
-  echo '</div>';
-  ?>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var bouton = document.getElementById('mon-bouton');
-
-      bouton.addEventListener('click', function(e) {
-        var position = window.pageYOffset || document.documentElement.scrollTop; // Enregistrer la position actuelle
-        sessionStorage.setItem('position', position.toString());
-      });
-
-      // Restaurer la position de défilement après le rechargement de la page
-      var position = sessionStorage.getItem('position');
-      if (position) {
-        window.scrollTo(0, parseInt(position));
-        sessionStorage.removeItem('position');
+      <?php
+      require_once('push_swap.php');
+      $arr = $_GET['la'];
+      $la = explode(' ', $arr);
+      for ($i = 0; $i < count($la); $i++) {
+        $la[$i] = intval($la[$i]);
       }
-    });
-  </script>
-</div>
+      $lb = [];
+      push_swap($la, $lb);
+      echo '<div style="background-color: coral; text-align: center;">';
+      echo "Résultat : ";
+      for ($i = 0; $i < count($la); $i++) {
+        echo $la[$i], " ";
+      }
+      echo '</div>';
+      ?>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var bouton = document.getElementById('mon-bouton');
+
+          bouton.addEventListener('click', function (e) {
+            var position = window.pageYOffset || document.documentElement.scrollTop; // Enregistrer la position actuelle
+            sessionStorage.setItem('position', position.toString());
+          });
+
+          // Restaurer la position de défilement après le rechargement de la page
+          var position = sessionStorage.getItem('position');
+          if (position) {
+            window.scrollTo(0, parseInt(position));
+            sessionStorage.removeItem('position');
+          }
+        });
+      </script>
+    </div>
 
     <h3 style="font-weight: 800 !important; text-align: center">Twitter</h3>
     <p style="text-align: center"></p>
@@ -301,11 +310,14 @@ font-weight: 800 !important;">
     </div>
   </main>
   <footer>
-    <a name="Contact"><h1 style="font-size: 5vh;font-weight: bold !important;">Contactez-moi</h1></a>
+    <a name="Contact">
+      <h1 style="font-size: 5vh;font-weight: bold !important;">Contactez-moi</h1>
+    </a>
     <form action="https://formsubmit.co/mickael.lesueur@epitech.eu" method="POST">
       <div class="form-group">
         <label for="exampleFormControlInput1">Email address</label>
-        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="your@mail.com" required>
+        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="your@mail.com"
+          required>
       </div>
       <input class="form-control" name="object" placeholder="Object" required>
       <div class="form-group">
