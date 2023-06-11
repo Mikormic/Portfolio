@@ -34,9 +34,9 @@ font-weight: 800 !important;">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div>
         <img id="brick" src="./output-onlinepngtools.png" alt="" width="100%">
-        <img id="start" src="./spideylogo.png" alt="" width="10%" style="margin-left: 46px;">
-        <img id="pause" src="./mileslogo.png" alt="" width="10%">
-        <img id="stop" src="./venomlogo.png" alt="" width="10%">
+        <img id="start" class="logo" src="./spideylogo.png" alt="" width="10%" style="margin-left: 46px;">
+        <img id="pause" class="logo" src="./mileslogo.png" alt="" width="10%">
+        <img id="stop" class="logo" src="./venomlogo.png" alt="" width="10%">
       </div>
       <script>
         function makeEaseInOut(timing) {
@@ -98,8 +98,8 @@ font-weight: 800 !important;">
           <li class="nav-item">
             <a id="spider" class="nav-link active" aria-current="page" href="#projet">Projets</a>
           </li>
-          <li class="nav-item">
-            <a id="man" class="nav-link active" aria-current="page" href="#Contact">Contact</a>
+          <li id="man" class="nav-item">
+            <a  class="nav-link active" aria-current="page" href="#Contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -169,7 +169,7 @@ font-weight: 800 !important;">
     <h3 style="font-weight: 800 !important;text-align: center">Puissance4</h3>
     <div class="container">
       <form action="http://mikymike.infinityfreeapp.com/puissance4/index.html" target="_blank">
-        <button class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+        <button id="buttp4" class="btn btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
             fill="currentColor" class="bi bi-joystick" viewBox="0 0 16 16">
             <path
               d="M10 2a2 2 0 0 1-1.5 1.937v5.087c.863.083 1.5.377 1.5.726 0 .414-.895.75-2 .75s-2-.336-2-.75c0-.35.637-.643 1.5-.726V3.937A2 2 0 1 1 10 2z">
